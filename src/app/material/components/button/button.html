@@ -1,0 +1,17 @@
+<!-- basic button -->
+<button *ngIf="!type || type === 'basic'" mat-button [color]='color'>{{text}}</button>
+
+<!-- raised button -->
+<button *ngIf="type === 'raised'" mat-raised-button [color]='color'>{{text}}</button>
+
+<!-- stroked button -->
+<button *ngIf="type === 'stroked'" mat-stroked-button [color]='color'>{{text}}</button>
+
+<!-- flat button -->
+<button *ngIf="type === 'flat'" mat-flat-button [color]='color'>{{text}}</button>
+
+<!-- icon button -->
+<!-- <button *ngIf="type === 'stroked'" mat-stroked-button [color]='color'>{{text}}</button> -->
+
+<!-- fab button -->
+<!-- <button *ngIf="type === 'stroked'" mat-stroked-button [color]='color'>{{text}}</button> -->
