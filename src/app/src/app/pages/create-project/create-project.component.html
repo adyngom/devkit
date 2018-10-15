@@ -1,0 +1,131 @@
+<section class="container">
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+        <label class="form-check-label" for="inlineRadio1">Enter project information</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Select analyzers</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+        <label class="form-check-label" for="inlineRadio3">Confirm project details</label>
+      </div>
+  </section>
+
+<section class="container">
+    <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Engagement Code</label>
+            <input type="tel" class="form-control" id="inputEmail4" placeholder="10 digits engagement code">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Engagement</label>
+            <input type="text" class="form-control" id="inputPassword4"  disabled>
+          </div>
+          <div class="form-group col-md-3">
+              <label for="inputPassword4">Partner</label>
+              <input type="text" class="form-control" id="inputPassword4" disabled>
+            </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputAddress">Client code</label>
+            <input type="text" class="form-control" id="inputAddress" disabled>
+          </div>
+          <div class="form-group col-md-6">
+              <label for="inputAddress">Client</label>
+              <input type="text" class="form-control" id="inputAddress" disabled>
+            </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputAddress">Project name</label>
+            <input type="text" class="form-control" id="inputAddress">
+          </div>
+          <div class="form-group col-md-3">
+              <label for="inputAddress">Year end</label>
+              <input type="text" class="form-control" ngbDatepicker #yearEnd="ngbDatepicker" (click)="yearEnd.toggle()"/>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="projectType">Project type</label>
+              <select id="projectType" class="form-control">
+                  <option selected>Choose a project type</option>
+                  <option *ngFor="let type of projectTypes" value="type.ptid">{{type.label}}</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputAddress">Analysis start</label>
+                <input type="text" class="form-control" ngbDatepicker #analysisStart="ngbDatepicker" (click)="analysisStart.toggle()"/>
+              </div>
+              <div class="form-group col-md-3">
+                  <label for="inputAddress">Analysis end</label>
+                  <input type="text" class="form-control" ngbDatepicker #analysisEnd="ngbDatepicker" (click)="analysisEnd.toggle()"/>
+                </div>
+          </div>
+
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="projectType">Project country</label>
+                <select id="projectType" class="form-control">
+                    <option selected>Choose a project country</option>
+                    <option *ngFor="let country of countries" value="country.code">{{country.name}}</option>
+                  </select>
+              </div>
+              <div class="form-group col-md-3">
+                  <label for="dataCenter">Data center location</label>
+                  <input type="text" id="dataCenter" class="form-control" />
+                </div>
+                
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="projectType">Project country</label>
+                  <select id="projectType" class="form-control">
+                      <option selected>Choose a project country</option>
+                      <option *ngFor="let sector of projectSector" value="sector.code">{{sector.label}}</option>
+                    </select>
+                </div>
+                
+                  
+              </div>
+
+        <!-- <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div> -->
+        <!-- <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div> -->
+        <!-- <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div> -->
+        <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
+      </form>
+</section>
