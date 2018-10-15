@@ -87,10 +87,10 @@
 
             <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="projectType">Project country</label>
+                  <label for="projectType">Project sector</label>
                   <select id="projectType" class="form-control">
-                      <option selected>Choose a project country</option>
-                      <option *ngFor="let sector of projectSector" value="sector.code">{{sector.label}}</option>
+                      <option selected>Choose a project sector</option>
+                      <option *ngFor="let sector of projectSectors" value="sector.code">{{sector.label}}</option>
                     </select>
                 </div>
                 
