@@ -52,9 +52,9 @@
           </div>
           <div class="form-group col-md-3">
               <label for="inputAddress">Year end</label>
-              <div class="input-group mb-3">
-                  <input type="text" class="form-control" bsDatepicker />
-                  <div class="input-group-append">
+              <div class="input-group mb-4">
+                  <input type="text" class="form-control" bsDatepicker #yearEnd="bsDatepicker"/>
+                  <div class="input-group-append" (click)="yearEnd.toggle()">
                     <span class="input-group-text">
                       <fa name="calendar"></fa>
                     </span>    
@@ -73,11 +73,25 @@
             </div>
             <div class="form-group col-md-3">
                 <label for="inputAddress">Analysis start</label>
-                <input type="text" class="form-control" bsDatepicker />
+                <div class="input-group mb-4">
+                    <input type="text" class="form-control" bsDatepicker #analysisStart="bsDatepicker"/>
+                    <div class="input-group-append" (click)="analysisStart.toggle()">
+                      <span class="input-group-text">
+                        <fa name="calendar"></fa>
+                      </span>    
+                    </div>      
+                </div>
               </div>
               <div class="form-group col-md-3">
                   <label for="inputAddress">Analysis end</label>
-                  <input type="text" class="form-control" bsDatepicker />
+                  <div class="input-group mb-4">
+                      <input type="text" class="form-control" bsDatepicker #analysisEnd="bsDatepicker"/>
+                      <div class="input-group-append" (click)="analysisEnd.toggle()">
+                        <span class="input-group-text">
+                          <fa name="calendar"></fa>
+                        </span>    
+                      </div>      
+                  </div>
                 </div>
           </div>
 
