@@ -13,6 +13,7 @@ import * as BT from 'ngx-bootstrap';
     BT.TypeaheadModule,
     BT.BsDatepickerModule.forRoot(),
     BT.AlertModule.forRoot(),
+    BT.ModalModule.forRoot(),
     FontAwesomeModule
   ],
   declarations: [],
@@ -22,6 +23,7 @@ import * as BT from 'ngx-bootstrap';
     BT.BsDatepickerModule,
     BT.TypeaheadModule,
     BT.AlertModule,
+    BT.ModalModule,
     FontAwesomeModule
   ]
 })
