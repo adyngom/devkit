@@ -8,7 +8,7 @@ import * as BT from 'ngx-bootstrap';
 @NgModule({
   imports: [
     CommonModule,
-    BT.PopoverModule,
+    BT.PopoverModule.forRoot(),
     BT.DatepickerModule,
     BT.TypeaheadModule,
     BT.BsDatepickerModule.forRoot(),
