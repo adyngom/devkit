@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from 'ngx-icons';
 // import { TestDirective } from './test.directive';
 import * as BT from 'ngx-bootstrap';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -11,7 +12,8 @@ import * as BT from 'ngx-bootstrap';
     BT.DatepickerModule,
     BT.TypeaheadModule,
     BT.BsDatepickerModule.forRoot(),
-    BT.AlertModule.forRoot()
+    BT.AlertModule.forRoot(),
+    FontAwesomeModule
   ],
   declarations: [],
   exports: [
@@ -19,7 +21,8 @@ import * as BT from 'ngx-bootstrap';
     BT.DatepickerModule,
     BT.BsDatepickerModule,
     BT.TypeaheadModule,
-    BT.AlertModule
+    BT.AlertModule,
+    FontAwesomeModule
   ]
 })
 export class BootstrapModule { }
