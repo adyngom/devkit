@@ -1,5 +1,5 @@
 <div class="container">
-    <!-- <section>
+    <section>
       <h3>Alert Boxes</h3>
       <alert type="success">Hello Bootstrap</alert>
     </section>
@@ -7,22 +7,21 @@
     <section>
       <h3>Typeahead</h3>
       <pre class="card card-block card-header mb-3">Model: {{matched | json}}</pre>
-      <input [(ngModel)]="ecode" dkTa
+      <input [(ngModel)]="ecode"
              [typeahead]="engagements"
              typeaheadOptionField="engagementCode"
              [typeaheadMinLength]="10"
              [typeaheadItemTemplate]="itemTpl"
              (typeaheadOnSelect)="onSelect($event)"
-             typeaheadDisplayField="clientName"
              class="form-control">
   
-            <ng-template #itemTpl let-result>
+            <ng-template #itemTpl let-model="item">
                <div class="full-width">
-                  <strong>Match 1: {{result}}</strong>
+                  <strong>{{model.clientName}}</strong>
                </div>
             </ng-template>
-    </section> -->
-    <!-- <section>
+    </section>
+    <section>
       <h3>Popovers</h3>
       <button type="button" class="btn btn-outline-secondary mr-2" placement="top"
       ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Popover on top">
@@ -46,30 +45,6 @@
     </section>
   
     <section>
-      <h3>Typeahead</h3>
-        A typeahead example that gets values from a static <code>string[]</code>
-      <ul>
-        <li><code>debounceTime</code> operator</li>
-        <li>kicks in only if 2+ characters typed</li>
-        <li>limits to 10 results</li>
-      </ul>
-  
-      <ng-template #rt let-r="result" let-t="term">
-        <h4>{{r.clientName}}</h4>
-      </ng-template>
-  
-      <label for="typeahead-basic">Engagement lookup:</label>
-      <input id="typeahead-basic" type="text" class="form-control" 
-      [(ngModel)]="ecode" 
-      [ngbTypeahead]="search" 
-      [inputFormatter]="formatter"
-      [resultTemplate]="rt"
-      />
-      <hr>
-      <pre>Model: {{ ecode | json }}</pre>
-    </section>
-  
-    <section>
       <h3>Radio Nav</h3>
       <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
@@ -83,6 +58,6 @@
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
           <label class="form-check-label" for="inlineRadio3">Confirm project details</label>
         </div>
-    </section> -->
+    </section>
   
   </div>

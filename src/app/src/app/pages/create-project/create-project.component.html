@@ -21,7 +21,7 @@
   </section>
 
 <section class="container">
-    <form>
+    <div class="form-container">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label class="form-field-label">
@@ -32,26 +32,43 @@
                 <fa name="question-circle"></fa>
               </span>
             </label>
-            <input type="tel" class="form-control" placeholder="10 digits engagement code">
+            <input [(ngModel)]="ecode"
+              [typeahead]="engagements"
+              typeaheadOptionField="engagementCode"
+              [typeaheadMinLength]="10"
+              [typeaheadItemTemplate]="itemTpl"
+              (typeaheadOnSelect)="onSelect($event)"
+              class="form-control">
+  
+            <ng-template #itemTpl let-model="item">
+               <div class="full-width">
+                  <strong>{{model.clientName}}</strong>
+               </div>
+            </ng-template>
+
           </div>
           <div class="form-group col-md-3">
             <label for="inputPassword4">Engagement</label>
-            <input type="text" class="form-control" id="inputPassword4"  disabled>
+            <input type="text" class="form-control" id="inputPassword4"  
+              disabled [value]="matched.engagementName">
           </div>
           <div class="form-group col-md-3">
               <label for="inputPassword4">Partner</label>
-              <input type="text" class="form-control" id="inputPassword4" disabled>
+              <input type="text" class="form-control" id="inputPassword4" disabled
+              [value]="matched.partnerName">
             </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputAddress">Client code</label>
-            <input type="text" class="form-control" id="inputAddress" disabled>
+            <input type="text" class="form-control" id="inputAddress" disabled
+            [value]="matched.clientCode">
           </div>
           <div class="form-group col-md-6">
               <label for="inputAddress">Client</label>
-              <input type="text" class="form-control" id="inputAddress" disabled>
+              <input type="text" class="form-control" id="inputAddress" disabled
+              [value]="matched.clientName">
             </div>
         </div>
 
@@ -201,5 +218,5 @@
               &nbsp;&nbsp;
             <button type="button" class="btn btn-secondary" (click)="lgModal.hide()">Cancel</button>
         </div>
-      </form>
+      </div>
 </section>
